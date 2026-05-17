@@ -14,13 +14,23 @@ if ("$programs" == "") {
 }
 do "$programs/config.do"
 
-// Read in data
+// Read in the cleaned data
 use "$data/data_for_analysis/auto_clean.dta", clear
 
-// The program should do as little modification to the data as possible, to
+// Check the data for changes
+// This is a simple assert to catch unexpected changes to the data
+assert _N == 74
+
+// Modify the data as required
+// This program should make as few modifications as possible to
 // ensure that all analysis programs are working with consistent data.
 
-
-// Create the figure and save to results folder.
+// Produce the results
+// This code creates a scatter plot
 scatter mpg price
+
+// Check the results for changes (optional)
+// We will skip this since it is not easy to check whether a graph has changed.
+
+// Write the results to the results folder.
 graph export "$results/figure01.png", replace
