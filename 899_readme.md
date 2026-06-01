@@ -1,3 +1,10 @@
+# Yang Li Econ 899
+
+# This package belongs to Yang Li, a student in ECON 899 at the SFU
+# https://liyang0v0.github.io/
+
+
+
 # ECON 899 replication package template
 
 This GitHub repo provides a template for ECON 899 students to create and share
